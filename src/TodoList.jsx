@@ -2,7 +2,12 @@ import React, { useState } from 'react'
 import './app.css'
 
  export const TodoList = () => {
-  const [todo , setTodo] = useState("")
+  const [todo , setTodo] = useState("");
+  const [todoList, setTodoList] = useState([]);
+
+  function setTodo{
+
+  }
  
   return (
     
@@ -10,7 +15,7 @@ import './app.css'
     <div className="container">
         <div className="header">Todo List</div>
         <input type="text" placeholder='Add Todo' value={todo} onChange={(e) =>setTodo(e.target.value)} />
-        <button>Add Todo</button>
+        <button onClick={setTodo} >Add Todo</button>
     </div>
     </>
   )
