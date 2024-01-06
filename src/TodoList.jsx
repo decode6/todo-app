@@ -6,8 +6,7 @@ import './app.css'
   const [todoList, setTodoList] = useState([]);
 
   function addtodo(){
-    // setTodoList([...todoList, todo]) 
-    // console.log(todoList)
+   
     setTodoList((todoList)=>{
         const updateTodo = [...todoList, todo]
         console.log(updateTodo)
