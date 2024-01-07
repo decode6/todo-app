@@ -14,6 +14,12 @@ import './app.css'
         return updateTodo
     })
   }
+
+  function remove(i){
+   const updatedTodos = todoList.filter((elem ,id )=>{
+    return i!=id; 
+   }) 
+  }
  
   return (
     
@@ -28,6 +34,7 @@ import './app.css'
             <>
             <p key={i}>
               <div>{data}</div>
+              <button onClick={()=>remove(i)}>Remove</button>
               </p></>
           )
         })}
