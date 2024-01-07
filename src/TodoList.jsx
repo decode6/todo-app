@@ -19,6 +19,11 @@ import './app.css'
    const updatedTodos = todoList.filter((elem ,id )=>{
     return i!=id; 
    }) 
+   setTodoList(updatedTodos)
+  }
+
+  function removeAll(){
+    setTodoList([]);
   }
  
   return (
@@ -38,6 +43,7 @@ import './app.css'
               </p></>
           )
         })}
+        {todoList.length>=1 && <button onClick={removeAll}>Remove All</button>}
     </div>
     </>
   )
